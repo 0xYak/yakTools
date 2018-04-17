@@ -1,6 +1,6 @@
 #Website Tools
 #Created by YMF
-#Follow me on Twitter @YakMasterFlash
+#Follow me on Twitter @0xYMF
 
 
 import os
