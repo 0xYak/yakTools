@@ -21,7 +21,7 @@ print("   | |   | )   ( || )      ")
 print("   \_/   |/     \||/       ")
 print("                           ")
 print("Welcome to yakTools v1.0")
-print("FOLLOW ME ON TWITTER @Parses\n\n\n")
+print("FOLLOW ME ON TWITTER @0xYMF\n\n\n")
 def main_menu():
   print("Main Menu:")
   print("Please use option 1 first!\n")
